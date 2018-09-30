@@ -1,15 +1,10 @@
 # hexo-theme-even
-A super simple theme for Hexo
+一个小巧精致（臭不要脸）的Hexo主题
+A light but elegant responsive theme for Hexo.
 
-[![GitHub stars](https://img.shields.io/github/stars/ahonn/hexo-theme-even.svg)](https://github.com/ahonn/hexo-theme-even/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/ahonn/hexo-theme-even.svg)](https://github.com/ahonn/hexo-theme-even/network)
-[![GitHub issues](https://img.shields.io/github/issues/ahonn/hexo-theme-even.svg)](https://github.com/ahonn/hexo-theme-even/issues)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ahonn/hexo-theme-even/master/LICENSE)
+## 例子 Demo
 
-## Demo
-[在线预览 Demo](http://ahonn.github.io/)
-
-## Feature
+## 特性 Feature
 - 从0开始构建主题全记录
 - 自定义双栏布局
 - 全开放式定制
@@ -17,14 +12,11 @@ A super simple theme for Hexo
 - 支持 Fancybox
 - 版权信息，自定义许可协议
 - 文章打赏，添加二维码
+## 截图 Screenshots
 
-## Screenshots
-![even-screenshots](http://ouv0frko5.bkt.clouddn.com/blog/6n2zu.png)
-
-## Installation
+## 安装方法 Installation
 ```bash
-$ npm install hexo-renderer-scss --save
-$ git clone https://github.com/ahonn/hexo-theme-even themes/even
+$ git clone https://github.com/hk029/hexo-theme-airy.git themes/airy
 ```
 
 修改配置文件中的 `theme` 字段为 `airy`:
@@ -35,5 +27,3 @@ $ git clone https://github.com/ahonn/hexo-theme-even themes/even
 ## Themes: http://hexo.io/themes/
 theme: airy
 ```
-
-更多主题设置，查看 [Document](https://github.com/ahonn/hexo-theme-even/wiki)
