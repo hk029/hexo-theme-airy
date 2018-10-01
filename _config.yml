@@ -19,3 +19,7 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/airy.js
+
+custom_logo:
+  enabled: true
+  image: /images/voidsky.png
