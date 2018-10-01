@@ -49,12 +49,9 @@
     </div>
   </div>
 
-  <div id="bottom-outer">
-    <div id="bottom-inner">
-      Site by {{ config.author }} using
-      <a href="http://hexo.io">hexo blog framework</a>.
-      <br>
-      <a href="{{ config.root }}">Home</a>
+  <div class="footer">
+    <div class="inner">
+      {% include '../_partials/footer.swig' %}
     </div>
   </div>
 
