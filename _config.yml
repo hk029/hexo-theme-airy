@@ -19,3 +19,32 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/airy.js
+
+custom_logo:
+  enabled: true
+  image: /images/voidsky.png
+
+
+profile:
+  photo:
+    url: /images/voidsky.png
+    round: true 
+  introduce: '这是我的博客'
+
+social:
+  github:
+    enable: true
+    url: github.com/hk029
+  # 微信的url填二维码的图片地址
+  wechat:
+    enable: false
+    url:
+  weibo:
+    enable: true
+    url: /
+  juejin:
+    enable:
+    url:
+  csdn:
+    enable: /
+    url:

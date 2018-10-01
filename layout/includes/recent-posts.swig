@@ -1,16 +1,12 @@
 
 {% if page.posts.length > 0 %}
-  <div id="recent-posts">
-    <h1>All Posts</h1>
+  <div class="recent-posts card nopadding">
     {% for postItem in page.posts.toArray() %}
+    <a href="{{ config.root }}{{ postItem.path }}">
       <div class="recent-post-item">
-        <a href="{{ config.root }}{{ postItem.path }}">{{ postItem.title }}</a>
-        {% if postItem.date %}
-          <time datetime="{{ postItem.date.toJSON() }}">
-            {{ date(postItem.date) }}
-          </time>
-        {% endif %}
+          {% include "./post-items.swig"%}
       </div>
+    </a>
     {% endfor %}
   </div>
 {% endif %}

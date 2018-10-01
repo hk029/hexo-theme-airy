@@ -3,7 +3,7 @@
 <div class="site-brand-wrapper">
     <div class="site-meta">
         <div class="custom-logo-site-title">
-            {% if theme.custom_logo.image %}
+            {% if theme.custom_logo.enabled %}
             <a>
                 <img class="custom-logo-image" src="{{ theme.custom_logo.image }}" alt="{{ title }}" />
             </a>
