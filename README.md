@@ -1,4 +1,4 @@
-# hexo-theme-even
+# hexo-theme-Airy
 一个小巧精致（臭不要脸）的Hexo主题
 A light but elegant responsive theme for Hexo.
 
