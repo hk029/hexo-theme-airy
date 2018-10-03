@@ -43,5 +43,6 @@ counter:
     other: "目前共计 %d 个分类"
 
 profile: 个人介绍
-
+tag: 标签
+recent: 最近文章
 year: 年

@@ -1,5 +1,12 @@
 {% extends 'includes/layout.swig' %}
 
 {% block body %}
-  {% include 'includes/recent-posts.swig' %}
+  <div class="right">
+    {% include '_partials/aside/profile.swig' %}
+    {% include '_partials/aside/tag-cloud.swig' %}
+    {% include '_partials/aside/recent-posts.swig' %}
+  </div>
+  <div class="left">
+    {% include 'includes/post-list.swig' %}
+  </div>
 {% endblock %}

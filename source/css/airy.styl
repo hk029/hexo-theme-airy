@@ -2,27 +2,27 @@
 
 
 
-// $scheme    = hexo-config('scheme') ? hexo-config('scheme') : 'Muse';
+// @scheme    = hexo-config('scheme') ? hexo-config('scheme') : 'Muse';
 
-// $custom_styles = hexo-config('custom_file_path.styles') ? "../../../../../" + hexo-config('custom_file_path.styles') : custom;
-// $custom_mixins = hexo-config('custom_file_path.mixins') ? "../../../../../" + hexo-config('custom_file_path.mixins') : custom;
-// $custom_variables = hexo-config('custom_file_path.variables') ? "../../../../../" + hexo-config('custom_file_path.variables') : custom;
+// @custom_styles = hexo-config('custom_file_path.styles') ? "../../../../../" + hexo-config('custom_file_path.styles') : custom;
+// @custom_mixins = hexo-config('custom_file_path.mixins') ? "../../../../../" + hexo-config('custom_file_path.mixins') : custom;
+// @custom_variables = hexo-config('custom_file_path.variables') ? "../../../../../" + hexo-config('custom_file_path.variables') : custom;
 
-// $variables = base $scheme $custom_variables;
-// $mixins    = base $scheme $custom_mixins;
+// @variables = base @scheme @custom_variables;
+// @mixins    = base @scheme @custom_mixins;
 
 
 
 // // Variables Layer
 // // --------------------------------------------------
-// for $variable in $variables
-//   @import "_variables/" + $variable;
+// for @variable in @variables
+//   @import "_variables/" + @variable;
 
 
 // // Mixins Layer
 // // --------------------------------------------------
-// for $mixin in $mixins
-//   @import "_mixins/" + $mixin;
+// for @mixin in @mixins
+//   @import "_mixins/" + @mixin;
 
 
 
@@ -32,9 +32,9 @@
 // // Scaffolding
 // @import "_common/scaffolding";
 
-@import "_common/var"
+@import "_common/var";
 
-@import "_common/mixins"
+@import "_common/mixins";
 
 @import "reset";
 // Layout
@@ -47,4 +47,4 @@
 
 // Custom Layer
 // --------------------------------------------------
-// @import "_custom/" + $custom_styles;
+// @import "_custom/" + @custom_styles;
