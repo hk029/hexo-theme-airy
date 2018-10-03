@@ -15,6 +15,6 @@
   <div class="power">
     {{_p('footer.powered', '<a href="https://hexo.io" target="_blank">Hexo</a>')}}
     |
-    {{_p('footer.theme', '<a href="https://github.com/hk029/hexo-theme-airy/" target="_blank">Age</a>')}}
+    {{_p('footer.theme', '<a href="https://github.com/hk029/hexo-theme-airy/" target="_blank">airy</a>')}}
   </div>
 </div>

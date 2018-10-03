@@ -48,10 +48,9 @@
       </div>
     </div>
 
-    <div class="footer">
-      <div class="inner">
-    {% include '../_partials/footer.swig' %}
-      </div>
+  <div class="footer">
+    <div class="inner">
+      {% include '../_partials/footer.swig' %}
     </div>
 
     {% if theme.scripts !== undefined && theme.scripts.length > 0 %}
