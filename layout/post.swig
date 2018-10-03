@@ -2,7 +2,11 @@
 
 {% block body %}
   <article id="post">
-    <h1>{{ page.title }}</h1>
-    {% autoescape false %}{{ page.content }}{% endautoescape %}
+    <div class="right">
+    {% include "./_partials/toc.swig" %}
+    </div>
+    <div class="left">
+    {% include "./_partials/posts.swig" %}
+    </div>
   </article>
 {% endblock %}
