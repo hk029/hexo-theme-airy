@@ -1,6 +1,5 @@
 # hexo-theme-airy
 一个小巧精致的Hexo主题
-
 A light but elegant responsive theme for Hexo.
 
 ## 例子 Demo
