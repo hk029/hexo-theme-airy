@@ -26,14 +26,7 @@
 <!doctype html>
 <html lang="{{ config.language }}">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ pageTitle }}</title>
-  {% if theme.stylesheets !== undefined && theme.stylesheets.length > 0 %}
-    {# stylesheet list from config.yml #}
-    {% for url in theme.stylesheets %}
-      <link rel="stylesheet" href="{{ url }}">
-    {% endfor %}
-  {% endif %}
+  {% include '../_partials/head.swig' %}
 </head>
 <body>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">

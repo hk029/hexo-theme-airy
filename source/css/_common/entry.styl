@@ -1,3 +1,5 @@
+    
+@import "highlight/atom-one-light.styl"
 .entry {
     margin: 0 auto;
     padding: 0 10px;
@@ -5,7 +7,6 @@
     color: #424b50;
     word-wrap: break-word;
     font-size: 14px;
-
 
     iframe, img, video {
         display: block;
@@ -32,7 +33,7 @@
         font-size: 14px;
         line-height: 1.6;
         letter-spacing: 1px;
-        margin: 1em 0 ;
+        margin: 1em 0;
     }
 
     h1 {
@@ -219,16 +220,8 @@
         font-size: 14px;
     }
 
-    pre {
-        code {
-            padding: 0;
-            margin: 0;
-            font-family: consolas, monaco, monospace;
-            font-size: 14px;
-            color: #424b50;
-            background: none;
-            border: none;
-        }
+    .hljs {
+        hljs();
     }
 
     img, video {

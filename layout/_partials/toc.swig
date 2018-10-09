@@ -1,6 +1,6 @@
-<div class="card">
+<div class="card post-toc">
     <h1 class="title">文章目录</h1>
-    <div class="post-toc">
+    <div>
 
         {% if page.toc_number === undefined %}
         {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
