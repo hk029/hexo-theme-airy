@@ -1,61 +1,46 @@
 {% extends 'includes/layout.swig' %}
 
 {% block body %}
-  {% set categoriesList = list_categories({ show_count: false }) %}
-  {% set tagsList = list_tags({ show_count: false }) %}
-  {% set archivesList = list_archives({ show_count: false }) %}
+{% set categoriesList = list_categories({ show_count: false }) %}
+{% set tagsList = list_tags({ show_count: false }) %}
+{% set archivesList = list_archives({ show_count: true, format:'MM-YYYY', }) %}
 
-  {% if !is_year() %}
-    <div id="archive">
-      <h1>Archives</h1>
-      {% if theme.atom %}
-        <p>
-          The feed is available via
-          <a href="{{ theme.atom }}">atom</a>.
-        </p>
-        <br>
+{{ require('./transform.js') }}
+{% if !is_year() %}
+<div class="archive">
+  <div class="flex-box">
+    <div class="card flex tags">
+      <h1 class="title"><i class="fas fa-tags"></i>&nbsp {{_p('Tags')}}</h1>
+      {% if tagsList %}
+      {% autoescape false %}{{ tagsList }}{% endautoescape %}
+      {% else %}
+      <p>{{ _p(None)}}.</p>
       {% endif %}
-
-      {% if config.atom %}
-        <p>
-          The feed is available via
-          <a href="{{ config.atom }}">atom</a>.
-        </p>
-        <br>
-      {% endif %}
-
-      <aside>
-        <h2>Categories</h2>
-        {% if categoriesList %}
-          {% autoescape false %}{{ categoriesList }}{% endautoescape %}
-        {% else %}
-          <p>None.</p>
-        {% endif %}
-      </aside>
-      <br>
-
-      <aside>
-        <h2>Tags</h2>
-        {% if tagsList %}
-          {% autoescape false %}{{ tagsList }}{% endautoescape %}
-        {% else %}
-          <p>None.</p>
-        {% endif %}
-      </aside>
-      <br>
-
-      <aside>
-        <h2>Archives</h2>
-        {% if archivesList %}
-          {% autoescape false %}{{ archivesList }}{% endautoescape %}
-        {% else %}
-          <p>None.</p>
-        {% endif %}
-      </aside>
     </div>
-  {% else %}
-    <h1>{{ page.month + '/' + page.year }}</h1>
-    {% include 'includes/post-list.swig' %}
-  {% endif %}
+    <div class="card flex categories">
+      <h1 class="title"><i class="fas fa-th"></i>&nbsp {{_p('Categories')}}</h1>
+      {% if categoriesList %}
+      {% autoescape false %}{{ categoriesList.replace('a','span') }}{% endautoescape %}
+      {% else %}
+      <p>{{ _p(None)}}.</p>
+      {% endif %}
+    </div>
+  </div>
+
+    <div class="card timeline">
+      <h1 class="title"><i class="fas fa-clock"></i>&nbsp {{_p('timeline')}}</h1>
+      {% if archivesList %}
+      {% autoescape false %}{{ archivesList.replace(RegExp('"archive-list-count">','g'),'"archive-list-count">' + _p('YouWrite') ) }}{% endautoescape %}
+      {% else %}
+      <p>{{ _p(None)}}.</p>
+      {% endif %}
+
+    </div>
+    
+</div>
+{% else %}
+<h1>{{ page.month + '/' + page.year }}</h1>
+{% include 'includes/post-list.swig' %}
+{% endif %}
 
 {% endblock %}

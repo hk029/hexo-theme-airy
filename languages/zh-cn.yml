@@ -1,10 +1,9 @@
-menu:
-  Home: 首页
-  Archives: 归档
-  Tags: 标签
-  Contact: 联系我
-  Categories: 分类
-  About: 关于
+Home: 首页
+Archives: 归档
+Tags: 标签
+Contact: 联系我
+Categories: 分类
+About: 关于
 
 footer:
   powered: "由 %s 强力驱动"
@@ -46,3 +45,4 @@ profile: 个人介绍
 tag: 标签
 recent: 最近文章
 year: 年
+YouWrite: 本月写了：

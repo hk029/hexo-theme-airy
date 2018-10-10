@@ -1,10 +1,9 @@
-menu:
-  Home: 首页
-  Archives: 归档
-  Tags: 标签
-  Contact: 联系我
-  Categories: 分类
-  About: 关于
+Home: 首页
+Archives: 归档
+Tags: 标签
+Contact: 联系我
+Categories: 分类
+About: 关于
 
 footer:
   powered: "由 %s 强力驱动"
@@ -40,5 +39,6 @@ counter:
     zero:  暂无分类
     one: 目前共计 1 个分类
     other: "目前共计 %d 个分类"
-    
+None: 空空如也    
 profile: 个人介绍
+timeline: 时间线

@@ -6,8 +6,8 @@ language: zh-cn
 menu:
   Home: /
   About: /about
-  Contact: /contact
   Archives: /archives
+  Categories: /categories
 
 # Miscelaneous
 favicon: /favicon.ico

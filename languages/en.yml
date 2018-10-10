@@ -1,10 +1,9 @@
-menu:
-  Home: Home
-  Archives: Archives
-  Contact: Contact
-  Tags: Tags
-  categories: Categories
-  About: About
+Home: Home
+Archives: Archives
+Contact: Contact
+Tags: Tags
+categories: Categories
+About: About
 
 footer:
   powered: "Powered by %s"
@@ -40,3 +39,4 @@ counter:
     zero: No Categories
     one: 1 Category In Total
     other: "%d Categories In Total"
+None: No thing here...

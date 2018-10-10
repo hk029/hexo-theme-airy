@@ -26,7 +26,7 @@
     <div clas="nav-menu">
         <div class="menu-inner">
             {% for key in Object.keys(theme.menu) %}
-            {% set title = 'menu.' + key %}
+            {% set title = key %}
             <a href="{{ theme.menu[key] }}">{{ _p(title) }}</a>
             {% endfor %}
         </div>
