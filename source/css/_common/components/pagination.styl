@@ -1,0 +1,45 @@
+.pagination {
+    text-align: center;
+    background: white;
+    position: relative;
+    height: 22px;
+
+    a, .current {
+        display: inline-block;
+        padding: 0 10px;
+        color: $black-2;
+        background: white;
+    }
+
+    .current {
+        color: $gray-2;
+    }
+
+    .prev, .next {
+        width: 240px;
+        position: absolute;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .prev {
+        text-align: left;
+        left: 0;
+
+        &::before {
+            fa('\f053');
+            margin-right: 10px;
+        }
+    }
+
+    .next {
+        right: 0;
+        text-align: right;
+
+        &::after {
+            fa('\f054');
+            margin-left: 10px;
+        }
+    }
+}

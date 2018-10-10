@@ -18,10 +18,3 @@
     {{_p('footer.theme', '<a href="https://github.com/hk029/hexo-theme-airy/" target="_blank">airy</a>')}}
   </div>
 </div>
-
-{% if theme.javascript !== undefined && theme.javascript.length > 0 %}
-  {# javascript list from config.yml #}
-  {% for url in theme.javascript %}
-    <script src="{{ url }}"></script>
-  {% endfor %}
-{% endif %}

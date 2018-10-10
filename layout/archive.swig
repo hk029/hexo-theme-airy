@@ -55,27 +55,7 @@
     </div>
   {% else %}
     <h1>{{ page.month + '/' + page.year }}</h1>
-    {% for postItem in page.posts.toArray() %}
-      <div class="archive-item">
-        {% if postItem.link %}
-          <!-- external link -->
-          <a href="{{ url_for(postItem.link) }}" target="_blank">
-            {{ postItem.title || 'No Title' }}
-          </a>
-        {% endif %}
-
-        {% if !postItem.link %}
-          <!-- internal link -->
-          <a href="{{ url_for(postItem.path) }}">
-            {{ postItem.title || 'No Title' }}
-          </a>
-        {% endif %}
-
-        <time datetime="{{ date_xml(postItem.date) }}">
-          {{ date(postItem.date) }}
-        </time>
-      </div>
-    {% endfor %}
+    {% include 'includes/post-list.swig' %}
   {% endif %}
 
 {% endblock %}

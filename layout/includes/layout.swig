@@ -52,6 +52,12 @@
         <script src="{{ url }}"></script>
       {% endfor %}
     {% endif %}
-
+    
+    {% if is_post() && theme.postjs !== undefined && theme.postjs.length > 0 %}
+    {# postjs list from config.yml #}
+      {% for url in theme.postjs %}
+      <script src="{{ url }}"></script>
+      {% endfor %}
+    {% endif %}
 </body>
 </html>

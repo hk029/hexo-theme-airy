@@ -18,17 +18,22 @@ stylesheets:
 - /lib/font-awesome/css/all.min.css
 # - /lib/highlight/styles/atom-one-dark.css
 # scripts loaded in the end of the body
-scripts:
 
 custom_logo:
   enabled: true
   image: /images/voidsky.png
 
-javascript:
+# js used in all file
+scripts:
 - /lib/highlight/highlight.pack.js
 - /lib/jquery/jquery.min.js
-- /js/scrollspy.js
 - /js/airy.js
+
+# js used in post
+postjs:
+- /js/scrollspy.js
+
+
 
 leancloud: false
 toc: true
