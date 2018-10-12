@@ -17,7 +17,6 @@ posts:
   next_post: 下一篇
   toc: 文章目录
   readmore: 阅读更多
-  visits: '阅读次数'
   reward: '赞赏支持'
 
 copyright:
@@ -40,9 +39,9 @@ counter:
     zero:  暂无分类
     one: 目前共计 1 个分类
     other: "目前共计 %d 个分类"
-
-profile: 个人介绍
 tag: 标签
 recent: 最近文章
-year: 年
+None: 空空如也    
+profile: 个人介绍
+timeline: 时间线
 YouWrite: 本月写了：

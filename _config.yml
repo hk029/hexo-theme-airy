@@ -16,11 +16,12 @@ favicon: /favicon.ico
 stylesheets:
 - /css/airy.css
 - /lib/font-awesome/css/all.min.css
+- https://fonts.googleapis.com/css?family=Abril+Fatface|Almendra:700|Berkshire+Swash|Bungee+Hairline|Cinzel:900|Limelight|Orbitron:900|Paytone+One|Playfair+Display+SC:900|Trochut:700
 # - /lib/highlight/styles/atom-one-dark.css
 # scripts loaded in the end of the body
 
 custom_logo:
-  enabled: true
+  enabled: false
   image: /images/voidsky.png
 
 # js used in all file

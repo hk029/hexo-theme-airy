@@ -20,7 +20,7 @@
     <div class="card flex categories">
       <h1 class="title"><i class="fas fa-th"></i>&nbsp {{_p('Categories')}}</h1>
       {% if categoriesList %}
-      {% autoescape false %}{{ categoriesList.replace('a','span') }}{% endautoescape %}
+      {% autoescape false %}{{ categoriesList }}{% endautoescape %}
       {% else %}
       <p>{{ _p(None)}}.</p>
       {% endif %}

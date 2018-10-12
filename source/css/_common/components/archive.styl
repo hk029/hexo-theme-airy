@@ -11,9 +11,11 @@
     .tags {
         margin-right: 20px;
         margin-bottom: 0px;
+            min-height: 150px;
     }
 
     .categories {
+            min-height: 150px;
     }
 
     .timeline {
@@ -70,6 +72,7 @@
                 font-size: 14px;
                 position: relative;
                 border-radius: 5px;
+                color:$gray-3;
 
                 &::before {
                     right: 100%;
@@ -84,28 +87,10 @@
                     border-width: 10px;
                 }
 
-                &::before::before {
-                    content: '本月写了：';
-                }
-
                 &::after {
                     content: '篇文章';
                 }
             }
         }
-    }
-
-    .category-list-item, .tag-list-item {
-        display: inline-block;
-        padding: 5px 10px;
-        font-size: 12px;
-        margin: 0 10px 10px 0;
-        border-radius: 5px;
-        background: #bae4f7;
-        color: $black-2;
-    }
-
-    .category-list-item {
-        background: $pink;
     }
 }

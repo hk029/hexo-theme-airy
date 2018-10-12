@@ -16,11 +16,7 @@
     }
 
     .prev, .next {
-        width: 240px;
         position: absolute;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
     }
 
     .prev {
@@ -41,5 +37,12 @@
             fa('\f054');
             margin-left: 10px;
         }
+    }
+    .next-text, .prev-text{
+        max-width: 40%;
+        width: 240px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 }

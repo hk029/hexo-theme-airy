@@ -114,3 +114,18 @@ clearfix() {
     clear: both;
   }
 }
+
+tagitem($color) {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 12px;
+  margin: 0 10px 10px 0;
+  border-radius: 2px;
+  border: 1px solid $color;
+  color: $color;
+  $light = $color - rgba(0, 0, 0, 0.2);
+  &:hover {
+    background: $light;
+    color: $white-2;
+  }
+}
