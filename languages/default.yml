@@ -1,9 +1,16 @@
 Home: 首页
+home: 首页
+index: 首页
 Archives: 归档
+archives: 归档
 Tags: 标签
+tags: 标签
 Contact: 联系我
+contact: 联系我
 Categories: 分类
+categories: 分类
 About: 关于
+about: 关于
 
 footer:
   powered: "由 %s 强力驱动"

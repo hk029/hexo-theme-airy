@@ -25,7 +25,12 @@
         <div class="menu-inner">
             {% for key in Object.keys(theme.menu) %}
             {% set title = key %}
-            <a href="{{ theme.menu[key] }}">{{ _p(title) }}</a>
+            <span class="menu-item">
+                {% if theme.menu[key].icon %}
+                <i class="fas fa-{{ theme.menu[key].icon}}"></i>
+                {% endif %}
+                <a href="{{ theme.menu[key].url }}">{{ _p(title) }}</a>
+            </span>
             {% endfor %}
         </div>
     </div>

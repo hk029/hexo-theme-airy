@@ -1,16 +1,20 @@
-.recent-posts{
+.recent-posts {
     padding-left: 10px;
-    .post-list{
-        // list-style: none;
-    padding-left: 10px;
-    text-align: left;
-    font-size: 14px;
-    .post-list-item{
-        margin-bottom: 10px;
-        &:hover{
-            text-decoration: underline;
-            }
-     }
 
+    .post-list {
+        padding-left: 10px;
+        text-align: left;
+        font-size: 14px;
+
+        .post-list-item {
+            margin-bottom: 10px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }

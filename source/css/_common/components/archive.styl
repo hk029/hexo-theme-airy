@@ -11,11 +11,21 @@
     .tags {
         margin-right: 20px;
         margin-bottom: 0px;
-            min-height: 150px;
+        min-height: 150px;
     }
 
     .categories {
-            min-height: 150px;
+        min-height: 150px;
+
+        .category-list-item {
+            font-size: 18px;
+        }
+
+        .category-list-link {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
     }
 
     .timeline {
@@ -72,7 +82,7 @@
                 font-size: 14px;
                 position: relative;
                 border-radius: 5px;
-                color:$gray-3;
+                color: $gray-3;
 
                 &::before {
                     right: 100%;

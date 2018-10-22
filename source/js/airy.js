@@ -7,7 +7,12 @@
     }
     init() {
       // 代码高亮
-      hljs.initHighlightingOnLoad();
+      hljs.initHighlighting();
+
+      let $footer = $(".footer");
+      if ($footer.height() + $footer.offset().top + 50 < window.screen.height) {
+        $footer.addClass("fix");
+      }
 
       // 代码高亮
       if (this.config.toc) {
@@ -16,34 +21,42 @@
     }
 
     scrollToc() {
-      var SPACING = 20;
-      var $toc = $(".post-toc");
-      var $footer = $(".footer");
+      let SPACING = 20;
+      let $toc = $(".post-toc");
+      let $footer = $(".footer");
 
       if ($toc.length) {
-        var minScrollTop = $toc.offset().top;
-        var maxScrollTop = $footer.offset().top - $toc.height() - SPACING;
+        let minScrollTop = $toc.offset().top;
+        let maxScrollTop =
+          $footer.offset().top -
+          window.screen.height +
+          $toc.height() +
+          $footer.height();
 
-        var tocState = {
+        console.log(
+          $footer.offset().top,
+          $toc.height(),
+          $footer.height(),
+          window.screen.height
+        );
+        let tocState = {
           start: {
             position: "absolute",
-            top: minScrollTop,
-            width: "240px"
+            top: 0
           },
           process: {
             position: "fixed",
-            top: SPACING,
-            width: "240px"
+            top: SPACING
           },
           end: {
             position: "absolute",
-            top: maxScrollTop,
-            width: "240px"
+            top: maxScrollTop - minScrollTop + SPACING
           }
         };
 
         $(window).scroll(function() {
-          var scrollTop = $(window).scrollTop();
+          let scrollTop = $(window).scrollTop();
+          console.log(scrollTop, minScrollTop, maxScrollTop);
 
           if (scrollTop < minScrollTop) {
             $toc.css(tocState.start);
@@ -57,6 +70,8 @@
     }
   }
 
-  var config = window.config;
-  var even = new Airy(config);
+  let config = window.config;
+  window.addEventListener("load", () => {
+    window.airy = new Airy(config);
+  });
 })(window);

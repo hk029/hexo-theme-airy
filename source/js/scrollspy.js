@@ -27,8 +27,9 @@ function JQuery(name) {
   class ScrollSpy {
     constructor(element, options) {
       this.$body = $("body");
-      this.$window = window;
-      this.$scrollElement = element === this.$body ? this.$window : element;
+      this.$window = $(window);
+      this.$scrollElement =
+        element[0] === this.$body[0] ? this.$window : element;
       this.options = { offset: 10, ...options };
       this.selector = (this.options.target || "") + " .nav li > a";
       this.offsets = [];
@@ -36,20 +37,24 @@ function JQuery(name) {
       this.activeTarget = null;
       this.scrollHeight = 0;
       if (
-        this.$scrollElement.scrollHeight - 100 >
-        this.$scrollElement.offsetHeight
+        this.$scrollElement !== this.$window &&
+        this.$scrollElement[0].scrollHeight - 100 >
+          this.$scrollElement[0].offsetHeight
       ) {
-        this.$scrollElement.addEventListener("scroll", this.process.bind(this));
+        this.$scrollElement.on("scroll", this.process.bind(this));
       } else {
-        this.$window.addEventListener("scroll", this.process.bind(this));
+        this.$window.on("scroll", this.process.bind(this));
       }
       this.refresh();
     }
 
     getScrollHeight() {
       return (
-        this.$scrollElement.scrollHeight ||
-        Math.max(this.$body.scrollHeight, document.documentElement.scrollHeight)
+        this.$scrollElement[0].scrollHeight ||
+        Math.max(
+          this.$body[0].scrollHeight,
+          document.documentElement.scrollHeight
+        )
       );
     }
 
@@ -57,14 +62,8 @@ function JQuery(name) {
       this.offsets = [];
       this.targets = [];
       this.scrollHeight = this.getScrollHeight();
-
-      if (window !== this.$scrollElement) {
-        offsetMethod = "position";
-        offsetBase = this.$scrollElement.scrollTop;
-      }
-
       this.offsets = [].slice
-        .call(this.$body.querySelectorAll(this.selector))
+        .call(this.$body.find(this.selector))
         .map(function(a) {
           let href = a.getAttribute("target") || a.href;
           href = /(#.*)/.test(href) && /(#.*)/g.exec(href)[0];
@@ -74,7 +73,7 @@ function JQuery(name) {
             ($href && {
               element: a,
               target: $href,
-              top: $href.offsetTop
+              top: $href.offset().top
             }) || { element: a, target: $href, top: -1 }
           );
         })
@@ -88,19 +87,18 @@ function JQuery(name) {
       var maxScroll = this.options.offset + scrollHeight;
       let i = 0;
 
-      Math.min(this.$scrollElement.clientHeight, window.screen.height);
       var offsets = this.offsets;
       var activeTarget = this.activeTarget;
       if (this.scrollHeight !== scrollHeight) {
         this.refresh();
       }
       let scroll = 0;
-      if (this.$scrollElement.scrollTop !== undefined) {
-        scroll = this.$scrollElement.scrollTop;
+      if (this.$scrollElement[0] !== window) {
+        scroll = this.$scrollElement.scroll().top;
       } else {
         scroll = window.scrollY;
       }
-      if (scroll >= maxScroll || activeTarget === offsets.length - 1) {
+      if (scroll + window.screen.height >= maxScroll) {
         return activeTarget !== (i = offsets.length - 1) && this.activate(i);
       }
 
@@ -118,6 +116,7 @@ function JQuery(name) {
 
     activate(t) {
       this.activeTarget = t;
+      if (t < 0) return;
       let target = this.offsets[t];
       this.clear();
       let parentLi = target.element.parentElement;
@@ -152,4 +151,4 @@ function JQuery(name) {
   window.onload = () => {
     new ScrollSpy($("body"));
   };
-})(JQuery);
+})(jQuery);

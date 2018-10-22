@@ -4,11 +4,21 @@ language: zh-cn
 
 # main menu navigation
 menu:
-  Home: /
-  About: /about
-  Archives: /archives
-  Categories: /categories
-
+  Home: 
+    url: /
+    icon: fas fa-home
+  About:
+    url: /about
+    icon: fas fa-user-astronaut
+  Archives: 
+    url: /archives
+    icon: fas fa-tags
+  Categories: 
+    url: /categories
+    icon: fas fa-th
+  Tags: 
+    url: /tags
+    icon: fas fa-tags
 # Miscelaneous
 favicon: /favicon.ico
 
@@ -16,6 +26,8 @@ favicon: /favicon.ico
 stylesheets:
 - /css/airy.css
 - /lib/font-awesome/css/all.min.css
+- /lib/fancybox/fancybox.min.css
+- /lib/iconfont/iconfont.css
 - https://fonts.googleapis.com/css?family=Abril+Fatface|Almendra:700|Berkshire+Swash|Bungee+Hairline|Cinzel:900|Limelight|Orbitron:900|Paytone+One|Playfair+Display+SC:900|Trochut:700
 # - /lib/highlight/styles/atom-one-dark.css
 # scripts loaded in the end of the body
@@ -28,6 +40,7 @@ custom_logo:
 scripts:
 - /lib/highlight/highlight.pack.js
 - /lib/jquery/jquery.min.js
+- /lib/fancybox/fancybox.min.js
 - /js/airy.js
 
 # js used in post
@@ -35,7 +48,11 @@ postjs:
 - /js/scrollspy.js
 
 
-
+categories:
+  english:
+    img: /images/avatar.jpg
+    intro: '我的英语之路'
+    
 leancloud: false
 toc: true
 
@@ -47,18 +64,28 @@ profile:
 
 social:
   github:
+    icon: fab fa-github
     enable: true
-    url: github.com/hk029
+    url: http://github.com/hk029
   # 微信的url填二维码的图片地址
-  wechat:
-    enable: false
-    url:
+  weixin:
+    qrcode: true
+    icon: fab fa-weixin
+    enable: true
+    url: /images/weixin.jpg
   weibo:
+    icon: fab fa-weibo
     enable: true
     url: /
   juejin:
-    enable:
+    icon: iconfont icon-juejin
+    enable: true
     url:
   csdn:
-    enable: /
+    icon: iconfont icon-logo_csdn
+    enable: true
+    url:
+  jianshu:
+    icon: iconfont icon-jianshu 
+    enable: true
     url:

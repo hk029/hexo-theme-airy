@@ -17,6 +17,7 @@
 
     .prev, .next {
         position: absolute;
+        vertical-align: middle;
     }
 
     .prev {
@@ -25,6 +26,7 @@
 
         &::before {
             fa('\f053');
+            vertical-align: middle;
             margin-right: 10px;
         }
     }
@@ -35,14 +37,17 @@
 
         &::after {
             fa('\f054');
+            vertical-align: middle;
             margin-left: 10px;
         }
     }
-    .next-text, .prev-text{
-        max-width: 40%;
-        width: 240px;
+
+    .next-text, .prev-text {
+        max-width: 240px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        display: inline-block;
+        vertical-align: middle;
     }
 }

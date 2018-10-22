@@ -1,11 +1,11 @@
 {% extends 'includes/layout.swig' %}
-{% set categoriesList = list_categories({ show_count: false }) %}
+{% set cate = list_cate({ show_count: false }) %}
 {% block body %}
 {% if page.title == 'categoriesgs'%}
 <div class="card h340">
-  {% if categoriesList %}
+  {% if cate %}
   {% autoescape false %}
-  {{categoriesList}}
+  {{cate}}
   {% endautoescape %}
   {% else %}
   <p>{{ _p(None)}}.</p>

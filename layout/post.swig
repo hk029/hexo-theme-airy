@@ -1,7 +1,7 @@
 {% extends 'includes/layout.swig' %}
 
 {% block body %}
-<article id="post">
+<article class="post">
   <div class="right">
     {% include "./_partials/_post/toc.swig" %}
   </div>
@@ -11,7 +11,7 @@
         <h1>
           {{page.title}}
         </h1>
-        {{page.content}}
+        {{fancybox(page.content)}}
       </div>
     </div>
     <div class="card">
