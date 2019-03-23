@@ -1,6 +1,7 @@
-html{
+html {
     height: 100%;
 }
+
 body {
     height: 100%;
     background: $white-2;
@@ -8,9 +9,8 @@ body {
 }
 
 .inner {
-    width: 960px;
-    margin: 0 auto;
-    padding: 25px 0 20px;
+    width: 1124px;
+    margin: 0px auto;
     clearfix();
 
     +mobile() {
@@ -19,7 +19,8 @@ body {
         padding: 10px;
     }
 }
-.header-bkg{
+
+.header-bkg {
     height: 300px;
     background-image: url('/images/bkg.jpeg');
     background-position: center 90%;
@@ -29,28 +30,20 @@ body {
     height: 300px;
     margin-top: -300px;
     position: relative;
-    background: rgba(141, 175, 170, 0.2);
-    color:$white-3;
+    background: rgba(125, 125, 125, 0.43);
+    color: $white-3;
 }
 
 .content-outer {
     position: relative;
     margin-top: -168px;
-    // &::before {
-    // content: '';
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
-    // height: 150px;
-    // background: #8c99e0;
-    // }
+    // height: 100%;
+    margin-bottom: 20px;
+    min-height: -moz-calc(100% - 100px - 300px + 168px);
+    min-height: -webkit-calc(100% - 100px - 300px + 168px);
+    min-height: calc(100% - 100px - 300px + 168px);
 }
 
-// .part-bkg{
-// height:100px;
-// background: $blue;
-// }
 .card {
     background: #fff;
     margin-bottom: 30px;
@@ -62,14 +55,18 @@ body {
     padding: 20px;
     margin-bottom: 20px;
 
+    &.profile {
+        .title {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin: 0 50px 10px;
+        }
+    }
+
     .title {
         color: $gray-2;
         font-size: 12px;
-        margin-bottom: 10px;
         font-weight: bold;
-        /* text-decoration: underline; */
-        /* border-bottom: 1px solid #ddd; */
-        padding-bottom: 10px;
     }
 
     &:last-child {
@@ -80,10 +77,11 @@ body {
         fix();
     }
 
-    &.h120{
+    &.h120 {
         min-height: 120px;
     }
-    &.h340{
+
+    &.h340 {
         min-height: 340px;
     }
 
@@ -104,6 +102,8 @@ body {
 
 .flex {
     flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .nopadding {
@@ -112,13 +112,27 @@ body {
 
 .left {
     // float: left;
-    margin-right: 260px;
+    margin-right: 280px;
     // flex:1;
 }
 
 .right {
     float: right;
-    width: 240px;
+    width: 260px;
     // margin-left:20px;
     // flex: 0 0 240px;
+}
+
+.tal {
+    text-align: left;
+}
+
+.cat-title {
+    text-align: center;
+
+    h1 {
+        color: white;
+        display: inline-block;
+        border-bottom: 1px solid white;
+    }
 }

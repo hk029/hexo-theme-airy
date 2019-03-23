@@ -1,4 +1,5 @@
 {% set subtitle = config.subtitle %}
+{% set categories = list_categories({depth: 1, show_count: false}) %}
 {% set title = config.title %}
 <div class="site-brand-wrapper">
     <div class="site-meta">
@@ -29,7 +30,17 @@
                 {% if theme.menu[key].icon %}
                 <i class="fas fa-{{ theme.menu[key].icon}}"></i>
                 {% endif %}
+                {% if title == "Categories" %}
+                <div class="category-menu" href="">
+                {{ _p(title) }}
+                    <div class="category-panel">
+                    <div class="triangle"></div>
+                    {{categories}}
+                    </div>
+                </div>
+                {% else %}
                 <a href="{{ theme.menu[key].url }}">{{ _p(title) }}</a>
+                {% endif %}
             </span>
             {% endfor %}
         </div>

@@ -52,7 +52,8 @@ tags: ${tags.map(c => `\n- ${c}`).join("")}
 ---
 ${data.raw
         .replace(/---[\s|\S]*---/g, "")
-        .replace(/o7bk1ffzo\.bkt\.clouddn\.com/g, "easyread.top")}
+        .replace(/o7bk1ffzo\.bkt\.clouddn\.com/g, "hksite.cn")
+        .replace(/easyread\.top/g, "hksite.cn")}
     `;
       fs.writeFileSync(data.full_source, postInfo, "utf-8");
       log.i(`Generated PostInfo for post ${data.source}`);

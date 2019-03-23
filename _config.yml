@@ -26,6 +26,7 @@ favicon: /favicon.ico
 stylesheets:
 - /css/airy.css
 - /lib/font-awesome/css/all.min.css
+- /lib/prism/prism.css
 - /lib/fancybox/fancybox.min.css
 - /lib/iconfont/iconfont.css
 - https://fonts.googleapis.com/css?family=Abril+Fatface|Almendra:700|Berkshire+Swash|Bungee+Hairline|Cinzel:900|Limelight|Orbitron:900|Paytone+One|Playfair+Display+SC:900|Trochut:700
@@ -38,7 +39,8 @@ custom_logo:
 
 # js used in all file
 scripts:
-- /lib/highlight/highlight.pack.js
+# - /lib/highlight/highlight.pack.js
+- /lib/prism/prism.js
 - /lib/jquery/jquery.min.js
 - /lib/fancybox/fancybox.min.js
 - /js/airy.js

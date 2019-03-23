@@ -3,6 +3,7 @@
 {% block body %}
 <div class="right">
   {% include '_partials/aside/profile.swig' %}
+  {% include '_partials/aside/category.swig' %}
   {% include '_partials/aside/tag-cloud.swig' %}
   {% include '_partials/aside/recent-posts.swig' %}
 </div>
