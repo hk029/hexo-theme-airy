@@ -31,7 +31,6 @@
           <a href="/${slug}">
             <div class="hit-title">
             ${_highlightResult.title.value}
-
             </div>
             <div >
               ${hltags.map(v => `<span class="hit-tags" >${v}</span>`)}

@@ -33,9 +33,6 @@ stylesheets:
 - /lib/prism/prism.css
 - /lib/fancybox/fancybox.min.css
 - /lib/iconfont/iconfont.css
-# - https://fonts.lug.ustc.edu.cn/css?family=Abril+Fatface|Almendra:700|Berkshire+Swash|Bungee+Hairline|Cinzel:900|Limelight|Orbitron:900|Paytone+One|Playfair+Display+SC:900|Trochut:700
-# - /lib/highlight/styles/atom-one-dark.css
-# scripts loaded in the end of the body
 
 custom_logo:
   enabled: false
@@ -43,16 +40,15 @@ custom_logo:
 
 # js used in all file
 scripts:
-- /lib/jquery/jquery.min.js
-- /lib/instantsearch/instantsearch.js
-- /lib/fancybox/fancybox.min.js
 - /js/airy.js
-- /js/search.js
 
 # js used in post
 postjs:
-- /js/scrollspy.js
+# - /js/scrollspy.js
+# - /lib/fancybox/fancybox.min.js
 
+searchjs:
+# - /js/search.js
 
 categories:
   english:

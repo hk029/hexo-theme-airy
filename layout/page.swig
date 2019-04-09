@@ -22,7 +22,7 @@
 <article id="page">
   <div class="card h340">
     <div class="entry">
-    sfdsd {{ page.title }}
+      {{ page.title }}
       {% autoescape false %}{{page.content }}{% endautoescape %}
     </div>
   </div>

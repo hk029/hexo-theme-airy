@@ -36,4 +36,5 @@
     </div>
   </div>
 </article>
+{{js(['/lib/jquery/jquery.min.js','/lib/fancybox/fancybox.min.js', '/js/scrollspy.js']) }}
 {% endblock %}
