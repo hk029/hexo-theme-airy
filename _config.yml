@@ -15,21 +15,25 @@ menu:
     icon: fas fa-tags
   Categories: 
     url: /categories
-    icon: fas fa-th
+    icon: fas fa-archive
   Tags: 
     url: /tags
     icon: fas fa-tags
+  Search: 
+    url: /search
+    icon: fas fa-search
 # Miscelaneous
 favicon: /favicon.ico
 
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/airy.css
+- /lib/instantsearch/instantsearch.css
 - /lib/font-awesome/css/all.min.css
 - /lib/prism/prism.css
 - /lib/fancybox/fancybox.min.css
 - /lib/iconfont/iconfont.css
-- https://fonts.googleapis.com/css?family=Abril+Fatface|Almendra:700|Berkshire+Swash|Bungee+Hairline|Cinzel:900|Limelight|Orbitron:900|Paytone+One|Playfair+Display+SC:900|Trochut:700
+# - https://fonts.lug.ustc.edu.cn/css?family=Abril+Fatface|Almendra:700|Berkshire+Swash|Bungee+Hairline|Cinzel:900|Limelight|Orbitron:900|Paytone+One|Playfair+Display+SC:900|Trochut:700
 # - /lib/highlight/styles/atom-one-dark.css
 # scripts loaded in the end of the body
 
@@ -39,11 +43,11 @@ custom_logo:
 
 # js used in all file
 scripts:
-# - /lib/highlight/highlight.pack.js
-- /lib/prism/prism.js
 - /lib/jquery/jquery.min.js
+- /lib/instantsearch/instantsearch.js
 - /lib/fancybox/fancybox.min.js
 - /js/airy.js
+- /js/search.js
 
 # js used in post
 postjs:
@@ -56,7 +60,14 @@ categories:
     intro: '我的英语之路'
     
 leancloud: false
+
 toc: true
+
+algolia:
+  applicationID: 'HI6G9CLJ2C'
+  apiKey: '6671e2e90c9c188081236ab28d9c2174'
+  indexName: 'hksite'
+
 
 profile:
   photo:

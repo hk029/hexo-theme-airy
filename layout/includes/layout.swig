@@ -47,7 +47,7 @@
     <div class="inner">
       {% include '../_partials/footer.swig' %}
     </div>
-
+    <script src="/assets/algolia/algoliasearchLite.min.js"></script>
     {% if theme.scripts !== undefined && theme.scripts.length > 0 %}
     {# scripts list from config.yml #}
     {% for url in theme.scripts %}

@@ -19,6 +19,7 @@
 
     .post-head {
         text-align: center;
+        margin-bottom: 30px;
 
         h1 {
             font-weight: bold;
@@ -26,6 +27,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             margin-top: -20px;
+            border: none;
         }
 
         .detail {
@@ -53,5 +55,152 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: block;
+        margin-bottom: 16px;
+        margin-bottom: 1rem;
+        overflow: auto;
+        width: 100%;
+    }
+
+    th {
+        font-weight: 700;
+    }
+
+    td, th {
+        border: 1px solid #ddd;
+        padding: 6px 13px;
+    }
+
+    tr {
+        border-top: 1px solid #ccc;
+    }
+
+    p.tip, tr:nth-child(2n) {
+        background-color: #f8f8f8;
+    }
+
+    h1, h2, h3, h4, strong {
+        color: #2c3e50;
+    }
+
+    a {
+        color: #42b983;
+        color: var(--theme-color, #42b983);
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 0 0 16px;
+        margin: 0 0 1rem;
+        padding-bottom: 10px;
+        // border-bottom: 1px solid #eee;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 35px 0 12.8px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 40px 0 9.6px;
+        margin: 40px 0 0.6rem;
+    }
+
+    h4 {
+        font-size: 18px;
+        font-size: 1.25rem;
+    }
+
+    h5, h6 {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    h6 {
+        color: #777;
+    }
+
+    figure, ol, p, ul {
+        margin: 1.2em 0;
+        font-size: 14px;
+    }
+
+    ol, p, ul {
+        line-height: 25.6px;
+        line-height: 1.6rem;
+        word-spacing: 0.8px;
+        word-spacing: 0.05rem;
+    }
+
+    ol, ul {
+        padding-left: 24px;
+        padding-left: 1.5rem;
+
+        li {
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    ul {
+        list-style: disc;
+
+        ul {
+            list-style: circle;
+        }
+    }
+
+    blockquote {
+        border-left: 4px solid #42b983;
+        border-left: 4px solid var(--theme-color, #42b983);
+        color: #858585;
+        margin: 2em 0;
+        padding-left: 20px;
+    }
+
+    blockquote p {
+        font-weight: 600;
+        margin-left: 0;
+    }
+
+    iframe {
+        margin: 1em 0;
+    }
+
+    em {
+        color: #7f8c8d;
+        font-style: italic;
+    }
+
+    code {
+        border-radius: 2px;
+        color: #e96900;
+        font-size: 13px;
+        font-size: 0.8rem;
+        margin: 0 2px;
+        padding: 3px 5px;
+        white-space: pre-wrap;
+    }
+
+    code, pre {
+        font-family: Roboto Mono, Monaco, courier, monospace;
+    }
+
+    pre {
+        background: #2c2c2c;
+        code {
+            background: #2c2c2c;
+            color: #dadada;
+        }
     }
 }

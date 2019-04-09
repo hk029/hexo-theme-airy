@@ -16,7 +16,8 @@
     <div class="card h340 tag-archive">
         {{tagcloud(site.tags, {min_font: 14, max_font: 36})}}
     </div>
-
+{% elif page.title == 'search'%}
+ {% include './search.swig' %}
 {% else %}
 <article id="page">
   <div class="card h340">

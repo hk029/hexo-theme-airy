@@ -12,7 +12,7 @@
                 $footer.height() + $footer.offset().top + 50 <
                 window.screen.height
             ) {
-                $footer.addClass('fix');
+                // $footer.addClass('fix');
             }
 
             // 代码高亮
@@ -49,12 +49,6 @@
                     $toc.height() +
                     $footer.height();
 
-                console.log(
-                    $footer.offset().top,
-                    $toc.height(),
-                    $footer.height(),
-                    window.screen.height
-                );
                 let tocState = {
                     start: {
                         position: 'absolute',
@@ -72,7 +66,6 @@
 
                 $(window).scroll(function() {
                     let scrollTop = $(window).scrollTop();
-                    console.log(scrollTop, minScrollTop, maxScrollTop);
 
                     if (scrollTop < minScrollTop) {
                         $toc.css(tocState.start);
