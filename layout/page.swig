@@ -22,7 +22,6 @@
 <article id="page">
   <div class="card h340">
     <div class="entry">
-      {{ page.title }}
       {% autoescape false %}{{page.content }}{% endautoescape %}
     </div>
   </div>

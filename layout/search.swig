@@ -7,4 +7,4 @@
         <div id="pagination"></div>
     </div>
 </div>
-{{js(['/assets/algolia/algoliasearchLite.min.js','/lib/instantsearch/instantsearch.js','/js/search.js']) }}
+{{js(['/lib/jquery/jquery.min.js','https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.35.1/algoliasearch.min.js','/lib/instantsearch/instantsearch.js','/js/search.js']) }}

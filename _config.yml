@@ -50,6 +50,13 @@ postjs:
 searchjs:
 # - /js/search.js
 
+# search bar
+algolia:
+  applicationID: UVD02QN2NI
+  adminApiKey: 7bc546079341b1fa8311cc8931427dc4
+  apiKey: 94932d8504e5be4abfff9c994dd2880e
+  indexName: hksite
+  
 categories:
   english:
     img: /images/avatar.jpg
@@ -59,17 +66,11 @@ leancloud: false
 
 toc: true
 
-algolia:
-  applicationID: 'HI6G9CLJ2C'
-  apiKey: '6671e2e90c9c188081236ab28d9c2174'
-  indexName: 'hksite'
-
-
 profile:
   photo:
     url: https://ws2.sinaimg.cn/large/006tNc79gy1fvu2ao3m3vj30uq0tgne4.jpg
     round: true 
-  introduce: '我是要成为海贼王的男人'
+  introduce: '有时候折腾一下，只为了证明自己的重要性'
 
 social:
   github:
@@ -93,8 +94,8 @@ social:
   csdn:
     icon: iconfont icon-logo_csdn
     enable: true
-    url:
+    url: https://blog.csdn.net/hk2291976
   jianshu:
     icon: iconfont icon-jianshu 
     enable: true
-    url:
+    url: https://www.jianshu.com/u/30f737ee0051

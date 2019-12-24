@@ -49,6 +49,7 @@
         max-width: 100%;
         box-shadow: 1px 1px 1px #e6e6e6;
         border: 1px solid #f7f7f7;
+        margin: 0 auto;
     }
 
     h1, h2, h3, h4 {
@@ -198,9 +199,29 @@
 
     pre {
         background: #2c2c2c;
+
         code {
             background: #2c2c2c;
             color: #dadada;
+        }
+    }
+
+    .copyright {
+        padding: 10px 0 10px 20px;
+        border-left: 3px solid $red;
+        background: #fafafa;
+
+        // border-bottom: 1px solid #ddd;
+
+        p {
+            color: #666;
+            margin: 5px 0;
+            font-size: 14px;
+            .title {
+                font-size: 14px;
+                color: #666;
+                font-weight: bold;
+            }
         }
     }
 }
